@@ -1,0 +1,26 @@
+[
+    {
+      "name": "ted-simulator",
+      "image": "656123244690.dkr.ecr.eu-central-1.amazonaws.com/tedsimulatorservice-dev-repo:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "cpu": 256,
+      "memory": 512,
+
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/ted-simulator-dev",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]

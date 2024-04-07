@@ -1,0 +1,15 @@
+ecs_cluster_name = "providerservice-dev-cluster"
+ecs_cluster_tag_name = "providerservice-dev-cluster"
+ecs_cluster_app_name = "providerservice"
+environment = "dev"
+ecr_repo_name = "providerservice-dev-repo"
+cpu = "256"
+memory = "512"
+operating_system_family = "LINUX"
+cpu_architecture = "X86_64"
+providerservice-container_definition_file_path = "./providerservice-container-definition-dev.json"
+providerservice-mongodb-container_definition_file_path = "./providerservice-mongodb-container-definition-dev.json"
+provider_mongodb_container_name = "providerservice-mongodb"
+provider_mongodb_container_port = 27017
+provider_container_name = "providerservice"
+provider_container_port = 5000

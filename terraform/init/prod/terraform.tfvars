@@ -1,0 +1,12 @@
+vpc_cidr_block = "10.0.0.0/16"
+name = "prod-vpc"
+environment = "prod"
+public_subnet_cidr_block = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidr_block = ["10.0.3.0/24", "10.0.4.0/24"]
+subnet_availability_zone = ["eu-central-1a", "eu-central-1b"]
+public_subnet_name = "prod-vpc-public-subnet"
+private_subnet_name = "prod-vpc-private-subnet"
+public_rt_name = "prod-vpc-public-rt"
+private_rt_name = "prod-vpc-private-rt"
+ecs_service_sg_name = "ecs-service-sg-prod"
+sg_name = "ecs-service-sg-prod"

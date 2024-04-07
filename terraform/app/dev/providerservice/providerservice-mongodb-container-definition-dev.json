@@ -1,0 +1,36 @@
+[
+    {
+      "name": "providerservice-mongodb",
+      "image": "mongo:6.0.13-jammy",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 27017,
+          "hostPort": 27017,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+            "name": "MONGO_INITDB_ROOT_PASSWORD",
+            "value": ""
+        },
+        {
+            "name": "MONGO_INITDB_ROOT_USERNAME",
+            "value": ""
+        }
+      ],
+      "cpu": 256,
+      "memory": 512,
+
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/providerservice-mongodb-dev",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+]

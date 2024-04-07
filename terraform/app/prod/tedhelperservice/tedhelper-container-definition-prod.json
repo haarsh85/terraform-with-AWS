@@ -1,0 +1,47 @@
+[
+  {
+    "name": "tedHelperService",
+    "image": "448627169723.dkr.ecr.eu-central-1.amazonaws.com/tedhelperservice-dev-repo:latest",
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 8050,
+        "hostPort": 8050,
+        "protocol": "tcp"
+      }
+    ],
+    "cpu": 256,
+    "memory": 512,
+    "environment": [
+      {
+          "name": "ted.url",
+          "value": "<api gw>"
+      },
+      {
+          "name": "spring.datasource.username",
+          "value": "postgres"
+      },
+      {
+          "name": "providerservice.url",
+          "value": "<api gw>"
+      },
+      {
+          "name": "spring.datasource.url",
+          "value": "<db url>"
+      },
+      {
+          "name": "spring.datasource.password",
+          "value": "postgres"
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-create-group": "true",
+        "awslogs-group": "/ecs/tedHelperService-prod",
+        "awslogs-region": "eu-central-1",
+        "awslogs-stream-prefix": "ecs"
+      }
+    }
+  }
+]

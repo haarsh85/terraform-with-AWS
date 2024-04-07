@@ -1,0 +1,7 @@
+frontend_bucket_name = "sa-project-frontend-s3-bucket"
+cloudfront_log_s3_bucket = "cloudfront-bucket-for-logs"
+# cloudfront_origin_s3_bucket = "sa-project-frontend-s3-bucket-with-cdn"
+cloudfront_s3_bucket_policy = "./cloudfront_s3_bucket_policy.json"
+frontend_bucket_with_cdn_name = "sa-project-frontend-s3-bucket-with-cdn"
+cloudfront_dist_name = "dev-cloudfront-dist"
+environment = "dev"

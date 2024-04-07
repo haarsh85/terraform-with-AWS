@@ -1,0 +1,16 @@
+variable "ecr_repo_names" {}
+variable "environment" {}
+variable "ecs_cluster_name" {}
+variable "ecs_cluster_tag_name" {}
+variable "ecs_cluster_app_name" {}
+#variable "container_definition_file_path" {}
+#variable "ecs_task_definition_family" {}
+variable "tedhelper-container_definition_file_path" {}
+variable "tedsimulator-container_definition_file_path" {}
+variable "cpu" {}
+variable "memory" {}
+variable "operating_system_family" {}
+variable "cpu_architecture" {}
+#variable "ecs_task_definition_tag_name" {}
+#variable "ecs_task_definition_app_name" {}
+variable "ecs_service_name" {}

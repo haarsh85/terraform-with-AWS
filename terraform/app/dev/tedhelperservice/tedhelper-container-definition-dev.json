@@ -1,0 +1,45 @@
+[
+    {
+      "name": "tedHelperService",
+      "image": "656123244690.dkr.ecr.eu-central-1.amazonaws.com/tedhelperservice-dev-repo:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8050,
+          "hostPort": 8050,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+            "name": "ted.url",
+            "value": "https://s8fr7sfpyi.execute-api.eu-central-1.amazonaws.com"
+        },
+        {
+            "name": "spring.datasource.username",
+            "value": ""
+        },
+        {
+            "name": "providerservice.url",
+            "value": "https://s8fr7sfpyi.execute-api.eu-central-1.amazonaws.com"
+        },
+        {
+            "name": "spring.datasource.url",
+            "value": ""
+        },
+        {
+            "name": "spring.datasource.password",
+            "value": ""
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/tedhelperservice-dev",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+]

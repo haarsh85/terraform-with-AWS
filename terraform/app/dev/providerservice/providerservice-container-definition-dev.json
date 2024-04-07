@@ -1,0 +1,41 @@
+[
+    {
+      "name": "providerservice",
+      "image": "656123244690.dkr.ecr.eu-central-1.amazonaws.com/providerservice-dev-repo:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "hostPort": 5000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+            "name": "PORT",
+            "value": "5000"
+        },
+        {
+            "name": "DB_URL",
+            "value": ""  
+        },
+        {
+            "name":"SECRET",
+            "value": ""
+        }
+
+      ],
+      "cpu": 256,
+      "memory": 512,
+
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/providerservice-dev",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+]

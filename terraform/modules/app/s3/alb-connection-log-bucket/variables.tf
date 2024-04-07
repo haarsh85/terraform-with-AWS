@@ -1,0 +1,1 @@
+variable "alb_connection_log_bucket_name" {}
